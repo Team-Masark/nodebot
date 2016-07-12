@@ -1,0 +1,19 @@
+{
+  "name": "nodebot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Team-Masark/nodebot.git"
+  },
+  "author": "Soham Kamani <sohamkamani@gmail.com> (http://sohamkamani.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Team-Masark/nodebot/issues"
+  },
+  "homepage": "https://github.com/Team-Masark/nodebot#readme"
+}
