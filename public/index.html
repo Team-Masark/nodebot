@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Node Bot</title>
+</head>
+
+<body>
+    <button id="bot-forward">forward</button>
+    <button id="bot-backward">backward</button>
+    <button id="bot-left">left</button>
+    <button id="bot-right">right</button>
+    <button id="bot-stop">stop</button>
+</body>
+<script src="jquery-3.0.0.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+    const init = () => {
+        const noop = () => {}
+        $('#bot-forward')[0]
+            .addEventListener('click', () => $.post('/robot/forward', noop))
+
+        $('#bot-backward')[0]
+            .addEventListener('click', () => $.post('/robot/backward', noop))
+
+        $('#bot-left')[0]
+            .addEventListener('click', () => $.post('/robot/left', noop))
+
+        $('#bot-right')[0]
+            .addEventListener('click', () => $.post('/robot/right', noop))
+
+        $('#bot-stop')[0]
+            .addEventListener('click', () => $.post('/robot/forward', noop))
+    }
+    window.onload = init
+</script>
+
+</html>
