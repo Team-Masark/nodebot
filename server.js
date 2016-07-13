@@ -17,22 +17,27 @@ app.use(express.static('public'))
 
 app.post('/robot/left', (req, res) => {
 	nodebot.moveLeft().then(done('left'))
+	res.end('ok')
 })
 
 app.post('/robot/right', (req, res) => {
 	nodebot.moveRight().then(done('right'))
+	res.end('ok')
 })
 
 app.post('/robot/forward', (req, res) => {
 	nodebot.moveForward().then(done('right'))
+	res.end('ok')
 })
 
 app.post('/robot/backward', (req, res) => {
 	nodebot.moveBackward().then(done('backward'))
+	res.end('ok')
 })
 
 app.post('/robot/stop', (req, res) => {
 	nodebot.stop().then(done('stop'))
+	res.end('ok')
 })
 
 app.listen(3000, () => console.log('Server started on port 3000'))
