@@ -1,10 +1,10 @@
 const Robot = require('./lib/robot')
 
 const nodebot = Robot({
-	mlPositive: 1,
-	mlNegative: 2,
-	mrPositive: 3,
-	mrNegative: 4
+	mlPositive: 22,
+	mlNegative: 23,
+	mrPositive: 24,
+	mrNegative: 25
 })
 
 const twoSecondTimeout = () => new Promise(resolve => setTimeout(resolve, 2000))
