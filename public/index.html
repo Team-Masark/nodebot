@@ -31,7 +31,7 @@
             .addEventListener('click', () => $.post('/robot/right', noop))
 
         $('#bot-stop')[0]
-            .addEventListener('click', () => $.post('/robot/forward', noop))
+            .addEventListener('click', () => $.post('/robot/stop', noop))
     }
     window.onload = init
 </script>
