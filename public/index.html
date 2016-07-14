@@ -12,10 +12,10 @@
     <button id="bot-left">left</button>
     <button id="bot-right">right</button>
     <button id="bot-stop">stop</button>
+    <button id="bot-picture">take picture</button>
 </body>
 <script src="jquery-3.0.0.min.js" charset="utf-8"></script>
 <script type="text/javascript">
-
     const init = () => {
         const noop = () => {}
         $('#bot-forward')[0]
@@ -32,6 +32,9 @@
 
         $('#bot-stop')[0]
             .addEventListener('click', () => $.post('/robot/stop', noop))
+
+        $('#bot-picture')[0]
+            .addEventListener('click', () => $.post('/robot/picture', noop))
     }
     window.onload = init
 </script>

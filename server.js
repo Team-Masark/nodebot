@@ -11,6 +11,8 @@ const nodebot = Robot({
 	mrNegative: 25
 })
 
+const takePicture = require('./lib/take-picture')
+
 done = action => () => console.log('Robot : ', action)
 
 app.use(express.static('public'))
@@ -37,6 +39,11 @@ app.post('/robot/backward', (req, res) => {
 
 app.post('/robot/stop', (req, res) => {
 	nodebot.stop().then(done('stop'))
+	res.end('ok')
+})
+
+app.post('/robot/picture', (req, res) => {
+	takePicture()
 	res.end('ok')
 })
 
